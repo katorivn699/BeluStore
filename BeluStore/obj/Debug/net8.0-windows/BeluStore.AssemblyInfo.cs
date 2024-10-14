@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BeluStore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ff88b3a32e03833e31ca01165b777a4a5592d76")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f006d93e3b1cf7574b0fe8887f4af85fac1bb49b")]
 [assembly: System.Reflection.AssemblyProductAttribute("BeluStore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BeluStore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
