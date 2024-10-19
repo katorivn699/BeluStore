@@ -46,6 +46,18 @@
           }
         }
       },
+      "FontAwesome.Sharp/6.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows7.0/FontAwesome.Sharp.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/FontAwesome.Sharp.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1625,6 +1637,23 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "FontAwesome.Sharp/6.6.0": {
+      "sha512": "bJCb2x73UC1nD9+9iMLaUy6Ujf9Pf+buL6FHwVnaoDYT4CQNLazz59hO5gQ0+SMSW0G+ZXmjjShOYr3Jn2UZiw==",
+      "type": "package",
+      "path": "fontawesome.sharp/6.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fontawesome.sharp.6.6.0.nupkg.sha512",
+        "fontawesome.sharp.nuspec",
+        "lib/net472/FontAwesome.Sharp.dll",
+        "lib/net48/FontAwesome.Sharp.dll",
+        "lib/net6.0-windows7.0/FontAwesome.Sharp.dll",
+        "lib/net7.0-windows7.0/FontAwesome.Sharp.dll",
+        "lib/net8.0-windows7.0/FontAwesome.Sharp.dll",
+        "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -4216,6 +4245,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "FontAwesome.Sharp >= 6.6.0",
       "Microsoft.EntityFrameworkCore >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
@@ -4224,23 +4254,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Katorivn\\.nuget\\packages\\": {},
-    "D:\\Envi\\Shared VS\\NuGetPackages": {}
+    "C:\\Users\\Guraa\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FA24\\PRN212\\BeluStore\\BeluStore\\BeluStore.csproj",
+      "projectUniqueName": "C:\\Users\\Guraa\\Source\\Repos\\BeluStore\\BeluStore\\BeluStore.csproj",
       "projectName": "BeluStore",
-      "projectPath": "D:\\FA24\\PRN212\\BeluStore\\BeluStore\\BeluStore.csproj",
-      "packagesPath": "C:\\Users\\Katorivn\\.nuget\\packages\\",
-      "outputPath": "D:\\FA24\\PRN212\\BeluStore\\BeluStore\\obj\\",
+      "projectPath": "C:\\Users\\Guraa\\Source\\Repos\\BeluStore\\BeluStore\\BeluStore.csproj",
+      "packagesPath": "C:\\Users\\Guraa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Guraa\\Source\\Repos\\BeluStore\\BeluStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Envi\\Shared VS\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Katorivn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Guraa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4249,6 +4279,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4272,6 +4303,10 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "FontAwesome.Sharp": {
+            "target": "Package",
+            "version": "[6.6.0, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[8.0.10, )"

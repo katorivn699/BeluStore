@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeluStore.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,13 @@ namespace BeluStore.Windows
         public Login()
         {
             InitializeComponent();
-            ApplicationThemeManager.Apply(this);
+            DataContext = new LoginViewModel(); // Đảm bảo bạn có ViewModel cho đăng nhập
+        }
+
+        private void Register_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Register registerWindow = new Register();
+            registerWindow.Show(); // Mở cửa sổ đăng ký
         }
     }
 }
