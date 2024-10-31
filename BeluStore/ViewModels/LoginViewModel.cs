@@ -50,17 +50,19 @@ namespace BeluStore.ViewModels
 
             if (user != null)
             {
-                if (user.Role == "manager") 
+                if (user.Role == "manager")
                 {
                     AdminWindow adminWindow = new AdminWindow();
                     Application.Current.MainWindow = adminWindow;
                     adminWindow.Show();
+                    Application.Current.Windows[0]?.Close();
                 }
-                else if (user.Role == "customer") 
+                else if (user.Role == "customer")
                 {
                     MainWindow mainWindow = new MainWindow();
                     Application.Current.MainWindow = mainWindow;
                     mainWindow.Show();
+                    Application.Current.Windows[0]?.Close();
                 }
 
                 if (parameter is Window loginWindow)

@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET8_0;NETCOREAPP
 D:\FA24\PRN212\BeluStore\BeluStore\App.xaml
-11407045341
+5-1445224229
 
-41647801360
-198-556154604
-MainWindow.xaml;
+20432155161
+241-1752544049
+AdminWindow.xaml;MainWindow.xaml;Views\ProductPage.xaml;Windows\Login.xaml;Windows\Register.xaml;
 
-True
+False
 
