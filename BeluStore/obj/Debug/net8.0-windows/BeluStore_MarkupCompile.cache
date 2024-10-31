@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\FA24\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\
+C:\Users\R.G.H.S\Desktop\BeluStore\BeluStore\obj\Debug\net8.0-windows\
 BeluStore
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\FA24\PRN212\BeluStore\BeluStore\App.xaml
-5-1445224229
+C:\Users\R.G.H.S\Desktop\BeluStore\BeluStore\App.xaml
+6-1628639767
 
-20953000801
-241-1752544049
-AdminWindow.xaml;MainWindow.xaml;Views\ProductPage.xaml;Windows\Login.xaml;Windows\Register.xaml;
+22-698518208
+241662141480
+AdminWindow.xaml;MainWindow.xaml;Views\ProductPage.xaml;Views\SupplierPage.xaml;Windows\Login.xaml;Windows\Register.xaml;
 
 False
 

@@ -26,6 +26,7 @@
         <ui:NavigationView PaneDisplayMode="LeftFluent" Grid.Row="1">
             <ui:NavigationView.MenuItems>
                 <ui:NavigationViewItem Content="Home" Icon="{ui:SymbolIcon Home24}"/>
+                <ui:NavigationViewItem Content="Suppliers" Icon="{ui:SymbolIcon BoxArrowLeft20}" TargetPageType="{x:Type view:SupplierPage}"/>
                 <ui:NavigationViewItem Content="Products" Icon="{ui:SymbolIcon TrayItemAdd20}" TargetPageType="{x:Type view:ProductPage}"/>
             </ui:NavigationView.MenuItems>
         </ui:NavigationView>
