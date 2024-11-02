@@ -4254,23 +4254,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\R.G.H.S\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Katorivn\\.nuget\\packages\\": {},
+    "D:\\Envi\\Shared VS\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\R.G.H.S\\Desktop\\BeluStore\\BeluStore\\BeluStore.csproj",
+      "projectUniqueName": "D:\\FA24\\PRN212\\BeluStore\\BeluStore\\BeluStore.csproj",
       "projectName": "BeluStore",
-      "projectPath": "C:\\Users\\R.G.H.S\\Desktop\\BeluStore\\BeluStore\\BeluStore.csproj",
-      "packagesPath": "C:\\Users\\R.G.H.S\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\R.G.H.S\\Desktop\\BeluStore\\BeluStore\\obj\\",
+      "projectPath": "D:\\FA24\\PRN212\\BeluStore\\BeluStore\\BeluStore.csproj",
+      "packagesPath": "C:\\Users\\Katorivn\\.nuget\\packages\\",
+      "outputPath": "D:\\FA24\\PRN212\\BeluStore\\BeluStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Envi\\Shared VS\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\R.G.H.S\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Katorivn\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4279,7 +4279,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

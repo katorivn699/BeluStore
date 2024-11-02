@@ -437,3 +437,11 @@ C:\Users\R.G.H.S\Desktop\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore.
 C:\Users\R.G.H.S\Desktop\BeluStore\BeluStore\obj\Debug\net8.0-windows\ref\BeluStore.dll
 C:\Users\R.G.H.S\Desktop\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\SupplierPage.g.cs
 C:\Users\R.G.H.S\Desktop\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\SupplierPage.baml
+D:\FA24\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\SupplierPage.g.cs
+D:\FA24\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\SupplierPage.baml
+D:\FA24\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\CategoryPage.g.cs
+D:\FA24\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\CategoryPage.baml
+D:\FA24\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\EditProductWindow.g.cs
+D:\FA24\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\EditProductWindow.baml
+D:\FA24\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\AddProductWindow.g.cs
+D:\FA24\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\AddProductWindow.baml

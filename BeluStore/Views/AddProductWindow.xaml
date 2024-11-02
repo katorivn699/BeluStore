@@ -1,0 +1,43 @@
+﻿<ui:FluentWindow x:Class="BeluStore.Views.AddProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:local="clr-namespace:BeluStore.Views"
+        mc:Ignorable="d"
+        Title="AddProductWindow" Height="auto" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Row for TitleBar -->
+            <RowDefinition Height="*"/>
+            <!-- Row for NavigationView -->
+        </Grid.RowDefinitions>
+        <ui:TitleBar Title="Add Product" Grid.Row="0" />
+        <StackPanel Margin="10" Grid.Row="1">
+            <TextBlock Text="Product Name" Margin="0,0,0,5"/>
+            <TextBox x:Name="ProductNameTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Category ID" Margin="0,0,0,5"/>
+            <TextBox x:Name="CategoryIdTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Supplier ID" Margin="0,0,0,5"/>
+            <TextBox x:Name="SupplierIdTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Price" Margin="0,0,0,5"/>
+            <TextBox x:Name="PriceTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Image URL" Margin="0,0,0,5"/>
+            <TextBox x:Name="ImageUrlTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Quantity in Stock" Margin="0,0,0,5"/>
+            <TextBox x:Name="QuantityInStockTextBox" Margin="0,0,0,10"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Cancel" Margin="0,0,10,0" Click="Cancel_Click"/>
+                <Button Content="Add" Click="Add_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</ui:FluentWindow>

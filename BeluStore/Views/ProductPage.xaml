@@ -13,20 +13,44 @@
     </Page.DataContext>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding products, Mode=TwoWay}">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Product Id" Width="*" Binding="{Binding ProductId}"/>
-                <DataGridTextColumn Header="Product Name" Width="*" Binding="{Binding ProductName}"/>
-                <DataGridTextColumn Header="Category ID" Width="*" Binding="{Binding CategoryId}"/>
-                <DataGridTextColumn Header="Supplier ID" Width="*" Binding="{Binding SupplierId}"/>
-                <DataGridTextColumn Header="Price" Width="*" Binding="{Binding Price}"/>
-                <DataGridTextColumn Header="Image" Width="*"  Binding="{Binding ProductImage}"/>
-                <DataGridTextColumn Header="Quantity" Width="*"  Binding="{Binding QuantityInStock}"/>
-                <DataGridTextColumn Header="Created" Width="*"  Binding="{Binding CreatedAt}"/>
-                <DataGridTextColumn Header="Edited" Width="*"   Binding="{Binding UpdatedAt}"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+            <Button Content="Add new product" Command="{Binding AddCommand}" Margin="0,0,10,0"/>
+            <TextBox Width="200" Height="30" 
+                     Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" 
+                     />
+            <Button Content="Search" Command="{Binding SearchCommand}" Margin="10,0,10,0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding products, Mode=TwoWay}" CanUserAddRows="False" VerticalContentAlignment="Center" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Width="*" Binding="{Binding ProductId}"/>
+                    <DataGridTextColumn Header="Product Name" Width="*" Binding="{Binding ProductName}"/>
+                    <DataGridTextColumn Header="Category" Width="*" Binding="{Binding Category.CategoryName}"/>
+                    <DataGridTextColumn Header="Supplier" Width="*" Binding="{Binding Supplier.SupplierName}"/>
+                    <DataGridTextColumn Header="Price" Width="*" Binding="{Binding Price}"/>
+                    <DataGridTextColumn Header="Image" Width="*"  Binding="{Binding ProductImage}"/>
+                    <DataGridTextColumn Header="Quantity" Width="*"  Binding="{Binding QuantityInStock}"/>
+                    <DataGridTemplateColumn Header="Actions" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="3">
+                                    <Button Content="Update" 
+                                Command="{Binding DataContext.UpdateCommand, RelativeSource={RelativeSource AncestorType=Page}}" 
+                                CommandParameter="{Binding}" 
+                                Margin="5,0"/>
+                                    <Button Content="Delete" 
+                                Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType=Page}}" 
+                                CommandParameter="{Binding}" 
+                                Margin="5,0"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
     </Grid>
 </Page>
