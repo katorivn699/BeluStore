@@ -8,19 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
 using Wpf.Ui.Controls;
 using Wpf.Ui.Input;
+using System.IO;
 
 namespace BeluStore.ViewModels
 {
     public class ProductViewModel : BaseViewModel
     {
         public ObservableCollection<Product> products { get; set; }
+        public ObservableCollection<Category> categories { get; set; }
+        public ObservableCollection<Supplier> suppliers { get; set; }
         private List<Product> _originalProducts; // Store original products
         public ICommand AddCommand { get; set; }
         public ICommand UpdateCommand { get; }
         public ICommand DeleteCommand { get; }
         public ICommand SearchCommand { get; }
+
 
         private string _searchQuery;
         public string SearchQuery
@@ -52,7 +58,11 @@ namespace BeluStore.ViewModels
             using (var context = new BeluStoreContext())
             {
                 _originalProducts = context.Products.Include(r => r.Category).Include(r => r.Supplier).ToList(); // Load original products
-                products = new ObservableCollection<Product>(_originalProducts); // Initialize Products with original list
+                var categoryList = context.Categories.ToList();
+                var supplierList = context.Suppliers.ToList();
+                products = new ObservableCollection<Product>(_originalProducts);
+                categories = new ObservableCollection<Category>(categoryList);
+                suppliers = new ObservableCollection<Supplier>(supplierList);
             }
         }
 
@@ -83,6 +93,8 @@ namespace BeluStore.ViewModels
 
                 using (var context = new BeluStoreContext())
                 {
+                    newProduct.Category = context.Categories.Find(newProduct.CategoryId);
+                    newProduct.Supplier = context.Suppliers.Find(newProduct.SupplierId);
                     context.Products.Add(newProduct);
                     context.SaveChanges();
                 }

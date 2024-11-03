@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
       xmlns:local="clr-namespace:BeluStore.Views"
       xmlns:vm="clr-namespace:BeluStore.ViewModels"
       mc:Ignorable="d" 
@@ -18,10 +19,10 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
             <Button Content="Add new product" Command="{Binding AddCommand}" Margin="0,0,10,0"/>
-            <TextBox Width="200" Height="30" 
+            <TextBlock VerticalAlignment="Center" Foreground="White" Margin="0,0,10,0">Search by Name:</TextBlock>
+            <TextBox Width="200" Height="40" 
                      Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" 
                      />
-            <Button Content="Search" Command="{Binding SearchCommand}" Margin="10,0,10,0"/>
         </StackPanel>
         <StackPanel Grid.Row="1">
             <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding products, Mode=TwoWay}" CanUserAddRows="False" VerticalContentAlignment="Center" >
@@ -31,17 +32,24 @@
                     <DataGridTextColumn Header="Category" Width="*" Binding="{Binding Category.CategoryName}"/>
                     <DataGridTextColumn Header="Supplier" Width="*" Binding="{Binding Supplier.SupplierName}"/>
                     <DataGridTextColumn Header="Price" Width="*" Binding="{Binding Price}"/>
-                    <DataGridTextColumn Header="Image" Width="*"  Binding="{Binding ProductImage}"/>
+                    <!--<DataGridTextColumn Header="Image" Width="*"  Binding="{Binding ProductImage}"/>-->
+                    <DataGridTemplateColumn Header="Image" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding ProductImageSource}" Width="50" Height="50" Stretch="UniformToFill" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                     <DataGridTextColumn Header="Quantity" Width="*"  Binding="{Binding QuantityInStock}"/>
                     <DataGridTemplateColumn Header="Actions" Width="*">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal" Margin="3">
-                                    <Button Content="Update" 
+                                    <Button Content="{ui:SymbolIcon Edit16}"
                                 Command="{Binding DataContext.UpdateCommand, RelativeSource={RelativeSource AncestorType=Page}}" 
                                 CommandParameter="{Binding}" 
                                 Margin="5,0"/>
-                                    <Button Content="Delete" 
+                                    <Button Content="{ui:SymbolIcon delete16}" 
                                 Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType=Page}}" 
                                 CommandParameter="{Binding}" 
                                 Margin="5,0"/>

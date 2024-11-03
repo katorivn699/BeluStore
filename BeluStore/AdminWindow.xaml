@@ -8,6 +8,7 @@
        xmlns:local="clr-namespace:BeluStore"
        xmlns:view="clr-namespace:BeluStore.Views"
        mc:Ignorable="d"
+       WindowStartupLocation="CenterScreen"
        Title="Admin Dashboard" Height="450" Width="800">
 
     <Grid>
@@ -23,7 +24,7 @@
         <ui:TitleBar Title="Admin Dashboard" Grid.Row="0"/>
 
         <!-- NavigationView in the second row -->
-        <ui:NavigationView IsBackButtonVisible="Auto" Grid.Row="1" >
+        <ui:NavigationView IsBackButtonVisible="Auto" IsPaneOpen="False" Grid.Row="1" >
             <ui:NavigationView.MenuItems>
                 <ui:NavigationViewItem Content="Home" Icon="{ui:SymbolIcon Home24}"/>
                 <ui:NavigationViewItem Content="Suppliers" Icon="{ui:SymbolIcon BoxArrowLeft20}" TargetPageType="{x:Type view:SupplierPage}"/>

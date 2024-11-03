@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
         xmlns:local="clr-namespace:BeluStore.Views"
+        xmlns:vm="clr-namespace:BeluStore.ViewModels"
         mc:Ignorable="d"
         Title="AddProductWindow" Height="auto" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <vm:ProductViewModel/>
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -19,17 +23,21 @@
             <TextBlock Text="Product Name" Margin="0,0,0,5"/>
             <TextBox x:Name="ProductNameTextBox" Margin="0,0,0,10"/>
 
-            <TextBlock Text="Category ID" Margin="0,0,0,5"/>
-            <TextBox x:Name="CategoryIdTextBox" Margin="0,0,0,10"/>
+            <TextBlock Text="Category" Margin="0,0,0,5"/>
+            <!--<TextBox x:Name="CategoryIdTextBox" Margin="0,0,0,10"/>-->
+            <ComboBox x:Name="CategoryComboBox" ItemsSource="{Binding categories}" DisplayMemberPath="CategoryName" SelectedValuePath="CategoryId"/>
 
-            <TextBlock Text="Supplier ID" Margin="0,0,0,5"/>
-            <TextBox x:Name="SupplierIdTextBox" Margin="0,0,0,10"/>
+            <TextBlock Text="Supplier" Margin="0,0,0,5"/>
+            <!--<TextBox x:Name="SupplierIdTextBox" Margin="0,0,0,10"/>-->
+            <ComboBox x:Name="SupplierComboBox" ItemsSource="{Binding suppliers}" DisplayMemberPath="SupplierName" SelectedValuePath="SupplierId"/>
 
             <TextBlock Text="Price" Margin="0,0,0,5"/>
             <TextBox x:Name="PriceTextBox" Margin="0,0,0,10"/>
 
             <TextBlock Text="Image URL" Margin="0,0,0,5"/>
-            <TextBox x:Name="ImageUrlTextBox" Margin="0,0,0,10"/>
+            <!--<TextBox x:Name="ImageUrlTextBox" Margin="0,0,0,10"/>-->
+            <TextBox x:Name="ImageUrlTextBox" IsReadOnly="True" Width="300"/>
+            <Button Content="Choose Image" Click="ChooseImage_Click" Width="100" />
 
             <TextBlock Text="Quantity in Stock" Margin="0,0,0,5"/>
             <TextBox x:Name="QuantityInStockTextBox" Margin="0,0,0,10"/>

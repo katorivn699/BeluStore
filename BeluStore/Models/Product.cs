@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
+using System.IO;
 
 namespace BeluStore.Models;
 
@@ -28,4 +31,14 @@ public partial class Product
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 
     public virtual Supplier? Supplier { get; set; }
+
+    public ImageSource ProductImageSource
+    {
+        get
+        {
+            if (string.IsNullOrEmpty(ProductImage) || !File.Exists(ProductImage))
+                return null;
+            return new BitmapImage(new Uri(ProductImage));
+        }
+    }
 }
