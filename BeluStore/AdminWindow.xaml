@@ -29,6 +29,7 @@
                 <ui:NavigationViewItem Content="Home" Icon="{ui:SymbolIcon Home24}"/>
                 <ui:NavigationViewItem Content="Suppliers" Icon="{ui:SymbolIcon BoxArrowLeft20}" TargetPageType="{x:Type view:SupplierPage}"/>
                 <ui:NavigationViewItem Content="Products" Icon="{ui:SymbolIcon TrayItemAdd20}" TargetPageType="{x:Type view:ProductPage}"/>
+                <ui:NavigationViewItem Content="Users" Icon="{ui:SymbolIcon People20}" TargetPageType="{x:Type view:UserManagerPage}"/>
             </ui:NavigationView.MenuItems>
         </ui:NavigationView>
     </Grid>
