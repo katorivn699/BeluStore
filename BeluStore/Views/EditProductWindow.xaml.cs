@@ -1,4 +1,5 @@
 ﻿using BeluStore.Models;
+using BeluStore.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace BeluStore.Views
         public EditProductWindow(Product product)
         {
             InitializeComponent();
-            DataContext = product;
+            DataContext = new EditProductViewModel(product);
         }
 
         private void OnSaveClick(object sender, RoutedEventArgs e)

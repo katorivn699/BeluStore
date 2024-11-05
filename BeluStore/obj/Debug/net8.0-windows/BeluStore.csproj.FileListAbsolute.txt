@@ -602,3 +602,5 @@ C:\Users\Guraa\Source\Repos\BeluStore12\BeluStore\obj\Debug\net8.0-windows\BeluS
 C:\Users\Guraa\Source\Repos\BeluStore12\BeluStore\obj\Debug\net8.0-windows\ref\BeluStore.dll
 C:\Users\Guraa\Source\Repos\BeluStore12\BeluStore\obj\Debug\net8.0-windows\Views\UserManagerPage.g.cs
 C:\Users\Guraa\Source\Repos\BeluStore12\BeluStore\obj\Debug\net8.0-windows\Views\UserManagerPage.baml
+D:\FA24\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\UserManagerPage.g.cs
+D:\FA24\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\UserManagerPage.baml

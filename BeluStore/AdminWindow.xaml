@@ -9,6 +9,7 @@
        xmlns:view="clr-namespace:BeluStore.Views"
        mc:Ignorable="d"
        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
        Title="Admin Dashboard" Height="450" Width="800">
 
     <Grid>
@@ -32,5 +33,6 @@
                 <ui:NavigationViewItem Content="Users" Icon="{ui:SymbolIcon People20}" TargetPageType="{x:Type view:UserManagerPage}"/>
             </ui:NavigationView.MenuItems>
         </ui:NavigationView>
+
     </Grid>
 </ui:FluentWindow>

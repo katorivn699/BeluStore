@@ -30,6 +30,8 @@ namespace BeluStore.Views
         {
             InitializeComponent();
         }
+
+
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             if (ValidateInputs())
@@ -37,12 +39,10 @@ namespace BeluStore.Views
                 NewProduct = new Product
                 {
                     ProductName = ProductNameTextBox.Text,
-                    //CategoryId = int.Parse(CategoryIdTextBox.Text),
-                    //SupplierId = int.Parse(SupplierIdTextBox.Text),
                     CategoryId = (int)CategoryComboBox.SelectedValue,
                     SupplierId = (int)SupplierComboBox.SelectedValue,
                     Price = decimal.Parse(PriceTextBox.Text),
-                    ProductImage = SaveImageToProject(ImageUrlTextBox.Text), // Save image to project folder
+                    ProductImage = SaveImageToProject(ImageUrlTextBox.Text),
                     QuantityInStock = int.Parse(QuantityInStockTextBox.Text),
                     CreatedAt = DateOnly.FromDateTime(DateTime.Now),
                     UpdatedAt = DateOnly.FromDateTime(DateTime.Now),
@@ -51,11 +51,9 @@ namespace BeluStore.Views
                 DialogResult = true; // Set the dialog result to true
                 Close(); // Close the window
             }
-            else
-            {
-                System.Windows.MessageBox.Show("Please fill in all fields correctly.", "Validation Error", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            // Nếu ValidateInputs() trả về false, không làm gì cả và để thông báo lỗi hiển thị ra ngoài.
         }
+
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
@@ -64,16 +62,51 @@ namespace BeluStore.Views
 
         private bool ValidateInputs()
         {
-            // Simple validation for required fields
-            return !string.IsNullOrWhiteSpace(ProductNameTextBox.Text) &&
-                   //!string.IsNullOrWhiteSpace(CategoryIdTextBox.Text) &&
-                   //!string.IsNullOrWhiteSpace(SupplierIdTextBox.Text) &&
-                   CategoryComboBox.SelectedValue != null &&
-                   SupplierComboBox.SelectedValue != null &&
-                   !string.IsNullOrWhiteSpace(PriceTextBox.Text) &&
-                   !string.IsNullOrWhiteSpace(ImageUrlTextBox.Text) &&
-                   !string.IsNullOrWhiteSpace(QuantityInStockTextBox.Text);
+            // Reset error messages
+            var errorMessages = new List<string>();
+
+            // Ensure required fields are populated and valid
+            if (string.IsNullOrWhiteSpace(ProductNameTextBox.Text) || ProductNameTextBox.Text.Trim().Length < 8)
+            {
+                errorMessages.Add("Product Name must be at least 8 characters long.");
+            }
+
+            if (CategoryComboBox.SelectedValue == null)
+            {
+                errorMessages.Add("Please select a Category.");
+            }
+
+            if (SupplierComboBox.SelectedValue == null)
+            {
+                errorMessages.Add("Please select a Supplier.");
+            }
+
+            if (string.IsNullOrWhiteSpace(PriceTextBox.Text) || !decimal.TryParse(PriceTextBox.Text, out decimal price) || price <= 0 || price >= 999)
+            {
+                errorMessages.Add("Price must be a valid number greater than 0 and less than 999.");
+            }
+
+            if (string.IsNullOrWhiteSpace(ImageUrlTextBox.Text))
+            {
+                errorMessages.Add("Please enter an Image URL.");
+            }
+
+            if (string.IsNullOrWhiteSpace(QuantityInStockTextBox.Text) || !int.TryParse(QuantityInStockTextBox.Text, out int quantity) || quantity <= 0 || quantity >= 999)
+            {
+                errorMessages.Add("Quantity In Stock must be a valid integer greater than 0 and less than 999.");
+            }
+
+            // Show error messages if any
+            if (errorMessages.Any())
+            {
+                System.Windows.MessageBox.Show(string.Join(Environment.NewLine, errorMessages), "Validation Errors", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
+                return false;
+            }
+
+            // All validations passed
+            return true;
         }
+
 
         private string SaveImageToProject(string imagePath)
         {
