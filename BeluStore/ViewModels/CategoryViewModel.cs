@@ -18,7 +18,7 @@ namespace BeluStore.ViewModels
         {
             get { return selectedCategory; }
             set
-            {
+            {   
                 if (selectedCategory != value)
                 {
                     selectedCategory = value;
