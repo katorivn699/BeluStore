@@ -1,4 +1,4 @@
-﻿using BeluStore.Models;
+using BeluStore.Models;
 using BeluStore.Util;
 using System;
 using System.Collections.Generic;
@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace BeluStore.ViewModels
@@ -41,12 +42,27 @@ namespace BeluStore.ViewModels
             }
         }
 
+        private string _searchKeyword;
+        public string _SearchKeyword
+        {
+            get { return _searchKeyword; }
+            set
+            {
+                if (_searchKeyword != value)
+                {
+                    _searchKeyword = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         public ObservableCollection<Category> categories { get; set; }
 
         public ICommand AddCategoryCommand { get; set; }
         public ICommand DeleteCategoryCommand { get; set; }
         public ICommand UpdateCategoryCommand { get; set; }
         public ICommand ClearCategoryCommand { get; set; }
+        public ICommand SearchCategoryCommand { get; set; }
 
         public CategoryViewModel()
         {
@@ -54,6 +70,7 @@ namespace BeluStore.ViewModels
             SelectedCategory = new Category();
             EditedCategory = new Category();
 
+            SearchCategoryCommand = new RelayCommand(searchCategory);
             AddCategoryCommand = new RelayCommand(AddCategory);
             DeleteCategoryCommand = new RelayCommand(DeleteCategory);
             UpdateCategoryCommand = new RelayCommand(UpdateCategory);
@@ -71,7 +88,8 @@ namespace BeluStore.ViewModels
 
         public void AddCategory(object param)
         {
-            if (EditedCategory != null)
+            bool check = ValidateInputs();
+            if (check)
             {
                 using (var context = new BeluStoreContext())
                 {
@@ -110,21 +128,21 @@ namespace BeluStore.ViewModels
 
         public void DeleteCategory(object param)
         {
-            if (SelectedCategory != null)
-            {
-                using (var context = new BeluStoreContext())
+                if (SelectedCategory != null)
                 {
-                    var categoryToDelete = context.Categories.Find(SelectedCategory.CategoryId);
-                    if (categoryToDelete != null)
+                    using (var context = new BeluStoreContext())
                     {
-                        context.Categories.Remove(categoryToDelete);
-                        context.SaveChanges();
+                        var categoryToDelete = context.Categories.Find(SelectedCategory.CategoryId);
+                        if (categoryToDelete != null)
+                        {
+                            context.Categories.Remove(categoryToDelete);
+                            context.SaveChanges();
 
-                        categories.Remove(SelectedCategory);
-                        ClearCategory(null);
+                            categories.Remove(SelectedCategory);
+                            ClearCategory(null);
+                        }
                     }
-                }
-            }
+                }                 
         }
 
         public void ClearCategory(object param)
@@ -144,5 +162,43 @@ namespace BeluStore.ViewModels
                 Description = category.Description,
             };
         }
+        private void searchCategory(object param)
+        {
+            using (var context = new BeluStoreContext())
+            {
+                var filteredCategories = context.Categories
+                    .Where(s => s.CategoryName.Contains(_SearchKeyword) || s.Description.Contains(_SearchKeyword))
+                    .ToList();
+                categories = new ObservableCollection<Category>(filteredCategories);
+                OnPropertyChanged(nameof(categories));
+            }
+        }
+        private bool ValidateInputs()
+        {
+            var errorMessages = new List<string>();
+
+            // Validate CategoryName
+            if (string.IsNullOrWhiteSpace(EditedCategory.CategoryName))
+            {
+                errorMessages.Add("Category Name cannot be empty.");
+            }
+
+            // Validate Description
+            if (string.IsNullOrWhiteSpace(EditedCategory.Description))
+            {
+                errorMessages.Add("Description cannot be empty.");
+            }
+
+            // Show error messages if any
+            if (errorMessages.Any())
+            {
+                MessageBox.Show(string.Join(Environment.NewLine, errorMessages), "Validation Errors", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+
+            // All validations passed
+            return true;
+        }
+
     }
 }
