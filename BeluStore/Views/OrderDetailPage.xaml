@@ -9,9 +9,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="OrderDetailPage">
 
-    <Page.DataContext>
-        <vm:OrderDetailViewModel/>
-    </Page.DataContext>
+
 
     <Grid>
         <Grid.RowDefinitions>
@@ -38,7 +36,7 @@
                 <DataGridTextColumn Header="UnitPrice" Binding="{Binding UnitPrice}" Width="1*" />
             </DataGrid.Columns>
         </DataGrid>
-        
+
     </Grid>
 
 </Page>

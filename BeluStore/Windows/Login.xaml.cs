@@ -29,8 +29,12 @@ namespace BeluStore.Windows
 
         private void Register_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            // Mở cửa sổ đăng ký
             Register registerWindow = new Register();
-            registerWindow.Show(); // Mở cửa sổ đăng ký
+            registerWindow.Show();
+
+            // Đóng cửa sổ đăng nhập hiện tại
+            this.Close();
         }
     }
 }

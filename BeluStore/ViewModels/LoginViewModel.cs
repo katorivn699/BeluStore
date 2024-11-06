@@ -2,6 +2,7 @@
 using System.Windows;
 using BeluStore.Models;
 using BeluStore.Util;
+using BeluStore.Windows;
 
 namespace BeluStore.ViewModels
 {
@@ -50,6 +51,13 @@ namespace BeluStore.ViewModels
 
             if (user != null)
             {
+                // Kiểm tra trạng thái tài khoản
+                if (user.Status == "Inactive")
+                {
+                    MessageBox.Show("Your Account Dead");
+                    return;
+                }
+
                 if (user.Role == "manager")
                 {
                     AdminWindow adminWindow = new AdminWindow();
@@ -65,16 +73,17 @@ namespace BeluStore.ViewModels
                     Application.Current.Windows[0]?.Close();
                 }
 
-                if (parameter is Window loginWindow)
-                {
-                    loginWindow.Close();
-                }
+                Application.Current.Windows
+          .OfType<Window>()
+          .FirstOrDefault(w => w is Login)?.Close();
+
             }
             else
             {
                 MessageBox.Show("Login failed. Please check your credentials.");
             }
         }
+
 
         private User GetUser()
         {
