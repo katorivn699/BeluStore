@@ -28,6 +28,7 @@ namespace BeluStore.ViewModels
         public ICommand UpdateCommand { get; }
         public ICommand DeleteCommand { get; }
         public ICommand SearchCommand { get; }
+        public ICommand ReloadCommand { get; }
 
 
         private string _searchQuery;
@@ -53,14 +54,15 @@ namespace BeluStore.ViewModels
             AddCommand = new RelayCommand<Product>(AddProduct);
             UpdateCommand = new RelayCommand<Product>(UpdateProduct);
             DeleteCommand = new RelayCommand<Product>(DeleteProduct);
+            ReloadCommand = new RelayCommand<Product>(Reload);
         }
 
-        public ProductViewModel(Product product)
+        private void Reload(object obj)
         {
-            products = new ObservableCollection<Product>();
-            categories = new ObservableCollection<Category>();
-            suppliers = new ObservableCollection<Supplier>();
+            products.Clear();
+            _originalProducts.Clear();
             LoadData();
+            OnPropertyChanged(nameof(products));
         }
 
         public void LoadData()
@@ -79,14 +81,12 @@ namespace BeluStore.ViewModels
 
         private void FilterProducts()
         {
-            products.Clear(); // Clear the current products in the view
+            products.Clear();
 
-            // Filter the original product list based on the SearchQuery
             var filtered = string.IsNullOrWhiteSpace(SearchQuery)
                 ? _originalProducts
                 : _originalProducts.Where(p => p.ProductName.Contains(SearchQuery, StringComparison.OrdinalIgnoreCase));
 
-            // Add the filtered products to the ObservableCollection
             foreach (var product in filtered)
             {
                 products.Add(product);
@@ -112,7 +112,6 @@ namespace BeluStore.ViewModels
                         context.SaveChanges();
                     }
 
-                    // Cập nhật lại danh sách
                     LoadData();
                     OnPropertyChanged(nameof(products));
                 }
@@ -170,10 +169,9 @@ namespace BeluStore.ViewModels
                                 OnPropertyChanged(nameof(observableProduct.Category));
                                 OnPropertyChanged(nameof(observableProduct.Supplier));
                             }
-
-                            OnPropertyChanged(nameof(products));
-                            LoadData();
                         }
+                        OnPropertyChanged(nameof(products));
+                        LoadData();
                     }
                 }
                 catch (Exception ex)

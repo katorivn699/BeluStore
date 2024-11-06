@@ -926,3 +926,5 @@ C:\Users\Guraa\Source\Repos\BeluStore1\BeluStore\obj\Debug\net8.0-windows\refint
 C:\Users\Guraa\Source\Repos\BeluStore1\BeluStore\obj\Debug\net8.0-windows\BeluStore.pdb
 C:\Users\Guraa\Source\Repos\BeluStore1\BeluStore\obj\Debug\net8.0-windows\BeluStore.genruntimeconfig.cache
 C:\Users\Guraa\Source\Repos\BeluStore1\BeluStore\obj\Debug\net8.0-windows\ref\BeluStore.dll
+D:\FA24\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\SupplierProductWindow.g.cs
+D:\FA24\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\SupplierProductWindow.baml

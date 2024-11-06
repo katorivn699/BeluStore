@@ -18,11 +18,18 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-            <Button Content="Add new product" Command="{Binding AddCommand}" Margin="0,0,10,0"/>
+            <Button Command="{Binding AddCommand}" Margin="0,0,10,0">
+                <StackPanel Orientation="Horizontal">
+                    <ui:SymbolIcon Symbol="AddCircle24" />
+                    <TextBlock Text="Add new product" Margin="5,0,0,0"/>
+                </StackPanel>
+            </Button>
             <TextBlock VerticalAlignment="Center" Foreground="White" Margin="0,0,10,0">Search by Name:</TextBlock>
             <TextBox Width="200" Height="40" 
                      Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" 
                      />
+            <TextBlock Text="Hot Reload:" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <Button Content="{ui:SymbolIcon ArrowClockwise24}" Command="{Binding ReloadCommand}" Margin="3,0,0,0"/>
         </StackPanel>
         <StackPanel Grid.Row="1">
             <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding products, Mode=TwoWay}" CanUserAddRows="False" VerticalContentAlignment="Center" >

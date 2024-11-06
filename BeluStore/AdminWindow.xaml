@@ -9,7 +9,7 @@
        xmlns:view="clr-namespace:BeluStore.Views"
        mc:Ignorable="d"
        WindowStartupLocation="CenterScreen"
-        WindowState="Maximized"
+       ui:WindowState="Maximized"
        Title="Admin Dashboard" Height="450" Width="800">
 
     <Grid>
