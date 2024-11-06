@@ -30,9 +30,15 @@
                 <ui:NavigationViewItem Content="Home" Icon="{ui:SymbolIcon Home24}"/>
                 <ui:NavigationViewItem Content="Suppliers" Icon="{ui:SymbolIcon BoxArrowLeft20}" TargetPageType="{x:Type view:SupplierPage}"/>
                 <ui:NavigationViewItem Content="Products" Icon="{ui:SymbolIcon TrayItemAdd20}" TargetPageType="{x:Type view:ProductPage}"/>
-                <ui:NavigationViewItem Content="Categories" Icon="{ui:SymbolIcon Library24}" TargetPageType="{x:Type view:CategoryPage}"/>
+                <ui:NavigationViewItem Content="Products" Icon="{ui:SymbolIcon Library24}" TargetPageType="{x:Type view:CategoryPage}"/>
+                <ui:NavigationViewItem Content="Products" Icon="{ui:SymbolIcon AppsListDetail24}" TargetPageType="{x:Type view:OrderDetailPage}"/>
                 <ui:NavigationViewItem Content="Users" Icon="{ui:SymbolIcon People20}" TargetPageType="{x:Type view:UserManagerPage}"/>
             </ui:NavigationView.MenuItems>
+
+            <ui:NavigationView.FooterMenuItems>
+                <ui:NavigationViewItem x:Name="LogoutButton" Content="Logout" Icon="{ui:SymbolIcon SignOut24}" ToolTip="Log out"/>
+            </ui:NavigationView.FooterMenuItems>
+
         </ui:NavigationView>
 
     </Grid>

@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using BeluStore.Windows;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -21,6 +22,16 @@ namespace BeluStore
         {
             InitializeComponent();
             ApplicationThemeManager.Apply(this);
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Tạo một cửa sổ Login mới
+            var loginWindow = new Login();
+            loginWindow.Show();
+
+            // Đóng cửa sổ hiện tại (MainWindow)
+            this.Close();
         }
 
     }
