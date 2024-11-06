@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Input;
 using BeluStore.Models;
 using BeluStore.Util;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BeluStore.ViewModels
 {
@@ -26,6 +28,7 @@ namespace BeluStore.ViewModels
                     NewUser.Username = _selectedUser.Username;
                     NewUser.Email = _selectedUser.Email;
                     NewUser.Role = _selectedUser.Role;
+                    NewUser.Status = _selectedUser.Status;
                     NewUser.Password = _selectedUser.Password;
                     NewUser.FullName = _selectedUser.FullName;
                     NewUser.PhoneNumber = _selectedUser.PhoneNumber;
@@ -46,8 +49,26 @@ namespace BeluStore.ViewModels
             }
         }
 
+        private string _searchText;
+        public string SearchText
+        {
+            get => _searchText;
+            set
+            {
+                if (_searchText != value)
+                {
+                    _searchText = value;
+                    OnPropertyChanged();
+                    ExecuteSearch(null);
+                }
+            }
+        }
+
+        private ObservableCollection<User> _allUsers;
         public ObservableCollection<User> Users { get; set; }
-        public ObservableCollection<string> Roles { get; set; } // New property for roles
+        public ObservableCollection<string> Roles { get; set; }
+        public ObservableCollection<string> Statuses { get; set; }
+        public ICommand SearchCommand { get; }
         public ICommand AddCommand { get; }
         public ICommand RemoveCommand { get; }
         public ICommand UpdateCommand { get; }
@@ -56,13 +77,16 @@ namespace BeluStore.ViewModels
         public UserViewModel()
         {
             Users = new ObservableCollection<User>();
-            Roles = new ObservableCollection<string> { "customer", "manager" }; // Populate roles
+            _allUsers = new ObservableCollection<User>();
+            Roles = new ObservableCollection<string> { "customer", "manager" };
+            Statuses = new ObservableCollection<string> { "Active", "Inactive" };
             NewUser = new User();
             LoadUsers();
             AddCommand = new RelayCommand(AddUser);
             RemoveCommand = new RelayCommand(RemoveUser);
             UpdateCommand = new RelayCommand(UpdateUser);
             ClearCommand = new RelayCommand(ClearFields);
+            SearchCommand = new RelayCommand(ExecuteSearch);
         }
 
         private void LoadUsers()
@@ -71,9 +95,11 @@ namespace BeluStore.ViewModels
             {
                 var users = context.Users.ToList();
                 Users.Clear();
+                _allUsers.Clear();
                 foreach (var user in users)
                 {
                     Users.Add(user);
+                    _allUsers.Add(user);
                 }
             }
         }
@@ -100,8 +126,8 @@ namespace BeluStore.ViewModels
                     context.Users.Add(NewUser);
                     context.SaveChanges();
 
-                    Users.Add(NewUser);  // Thêm vào ObservableCollection ngay sau khi lưu
-                    OnPropertyChanged(nameof(Users)); // Đảm bảo cập nhật UI
+                    Users.Add(NewUser);
+                    OnPropertyChanged(nameof(Users));
                     ClearFields(null);
                 }
             }
@@ -115,13 +141,13 @@ namespace BeluStore.ViewModels
         {
             if (user == null) return false;
             return !string.IsNullOrWhiteSpace(user.Username) &&
-                   IsValidEmail(user.Email) &&
+                   !string.IsNullOrWhiteSpace(user.Email) &&
                    !string.IsNullOrWhiteSpace(user.PhoneNumber) &&
                    !string.IsNullOrWhiteSpace(user.Address) &&
                    !string.IsNullOrWhiteSpace(user.Role);
         }
 
-        // Phương thức kiểm tra định dạng email
+
         private bool IsValidEmail(string email)
         {
             return Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.IgnoreCase);
@@ -158,6 +184,7 @@ namespace BeluStore.ViewModels
                         userToUpdate.Username = NewUser.Username;
                         userToUpdate.Email = NewUser.Email;
                         userToUpdate.Role = NewUser.Role;
+                        userToUpdate.Status = NewUser.Status;
                         userToUpdate.FullName = NewUser.FullName;
                         userToUpdate.PhoneNumber = NewUser.PhoneNumber;
                         userToUpdate.Address = NewUser.Address;
@@ -182,6 +209,42 @@ namespace BeluStore.ViewModels
             }
         }
 
+        private void ExecuteSearch(object parameter)
+        {
+
+            Users.Clear();
+
+            if (string.IsNullOrWhiteSpace(SearchText))
+            {
+
+                foreach (var user in _allUsers)
+                {
+                    Users.Add(user);
+                }
+            }
+            else
+            {
+
+                var filteredUsers = _allUsers.Where(u =>
+                    (u.Username?.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                    (u.Email?.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                    (u.FullName?.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                    (u.Role?.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                    (u.Status?.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                    (u.PhoneNumber?.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                    (u.Address?.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ?? false)
+                );
+
+
+                foreach (var user in filteredUsers)
+                {
+                    Users.Add(user);
+                }
+            }
+        }
+
+
+
         public void ClearFields(object parameter)
         {
             SelectedUser = null;
@@ -189,5 +252,6 @@ namespace BeluStore.ViewModels
             OnPropertyChanged(nameof(SelectedUser));
             OnPropertyChanged(nameof(NewUser));
         }
+
     }
 }

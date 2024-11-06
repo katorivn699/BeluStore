@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using BeluStore.Models;
 using BeluStore.Util;
+using BeluStore.Views;
+using BeluStore.Windows;
 
 namespace BeluStore.ViewModels
 {
@@ -100,9 +103,16 @@ namespace BeluStore.ViewModels
 
         private void ExecuteRegister(object? parameter)
         {
+
+            if (!IsUserValid())
+            {
+                MessageBox.Show("Please fill in all required fields with valid data.");
+                return;
+            }
+
             using (var context = new BeluStoreContext())
             {
-                // Kiểm tra xem username có tồn tại không
+
                 var existingUser = context.Users.FirstOrDefault(u => u.Username == Username);
                 if (existingUser != null)
                 {
@@ -110,23 +120,63 @@ namespace BeluStore.ViewModels
                     return;
                 }
 
-                // Tạo mới người dùng và lưu vào cơ sở dữ liệu
+
+                if (context.Users.Any(u => u.Email == Email))
+                {
+                    MessageBox.Show("A user with this email already exists.");
+                    return;
+                }
+
                 var newUser = new User
                 {
                     Username = Username,
                     Email = Email,
-                    Password = Password, 
+                    Password = Password,
                     FullName = FullName,
                     PhoneNumber = PhoneNumber,
                     Address = Address,
-                    Role = "customer" 
+                    Role = "customer"
                 };
 
                 context.Users.Add(newUser);
                 context.SaveChanges();
 
                 MessageBox.Show("Registration successful!");
+
+                var loginWindow = new Login();
+                loginWindow.Show();
+
+                var registerWindow = Application.Current.Windows.OfType<Register>().FirstOrDefault();
+                registerWindow?.Close();
+
+
+
             }
+        }
+
+        private bool IsUserValid()
+        {
+            return !string.IsNullOrWhiteSpace(Username) &&
+                   !string.IsNullOrWhiteSpace(Email) &&
+                   !string.IsNullOrWhiteSpace(Password) &&
+                   !string.IsNullOrWhiteSpace(FullName) &&
+                   !string.IsNullOrWhiteSpace(PhoneNumber) &&
+                   !string.IsNullOrWhiteSpace(Address);
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            return Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.IgnoreCase);
+        }
+
+
+        private bool IsValidPassword(string password)
+        {
+
+            return password.Length >= 8 &&
+                   Regex.IsMatch(password, @"[A-Z]") &&
+                   Regex.IsMatch(password, @"[a-z]") &&
+                   Regex.IsMatch(password, @"[0-9]");
         }
     }
 }

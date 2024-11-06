@@ -182,6 +182,10 @@ public partial class BeluStoreContext : DbContext
             entity.Property(e => e.Role)
                 .HasMaxLength(50)
                 .HasColumnName("role");
+            entity.Property(e => e.Status)
+               .HasMaxLength(50)
+               .HasDefaultValue("Active")
+               .HasColumnName("status");
             entity.Property(e => e.Username)
                 .HasMaxLength(255)
                 .HasColumnName("username");

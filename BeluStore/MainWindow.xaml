@@ -39,9 +39,16 @@
             <TextBlock Text="User name"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Right"
-                       Margin="0,0,20,0"
+                       Margin="0,0,10,0"
                        FontWeight="Bold" />
+
+            <Button Content="Logout"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,5,0"
+                    Click="LogoutButton_Click" />
         </DockPanel>
+
+
 
         <!-- Banner -->
         <ui:Card Margin="10">

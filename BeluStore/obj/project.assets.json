@@ -4254,23 +4254,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\R.G.H.S\\.nuget\\packages\\": {},
+    "C:\\Users\\Guraa\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN212\\BeluStore\\BeluStore\\BeluStore.csproj",
+      "projectUniqueName": "C:\\Users\\Guraa\\Source\\Repos\\BeluStore1\\BeluStore\\BeluStore.csproj",
       "projectName": "BeluStore",
-      "projectPath": "D:\\PRN212\\BeluStore\\BeluStore\\BeluStore.csproj",
-      "packagesPath": "C:\\Users\\R.G.H.S\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN212\\BeluStore\\BeluStore\\obj\\",
+      "projectPath": "C:\\Users\\Guraa\\Source\\Repos\\BeluStore1\\BeluStore\\BeluStore.csproj",
+      "packagesPath": "C:\\Users\\Guraa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Guraa\\Source\\Repos\\BeluStore1\\BeluStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\R.G.H.S\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Guraa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

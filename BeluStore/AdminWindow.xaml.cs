@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Wpf.Ui.Appearance;
+using BeluStore.Windows;
 
 namespace BeluStore
 {
@@ -23,7 +24,18 @@ namespace BeluStore
         public AdminWindow()
         {
             InitializeComponent();
+            LogoutButton.Click += LogoutButton_Click;
         }
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            var loginWindow = new Login();
+            loginWindow.Show();
+
+            this.Close();
+        }
+
 
     }
 }
