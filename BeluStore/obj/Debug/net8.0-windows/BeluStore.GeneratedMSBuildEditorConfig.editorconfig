@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BeluStore
-build_property.ProjectDir = C:\Users\Guraa\Source\Repos\BeluStore1\BeluStore\
+build_property.ProjectDir = D:\FPT K18\VS\BeluStore\BeluStore\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

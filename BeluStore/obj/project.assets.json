@@ -4254,23 +4254,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Guraa\\.nuget\\packages\\": {},
+    "C:\\Users\\PC\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Guraa\\Source\\Repos\\BeluStore1\\BeluStore\\BeluStore.csproj",
+      "projectUniqueName": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\BeluStore.csproj",
       "projectName": "BeluStore",
-      "projectPath": "C:\\Users\\Guraa\\Source\\Repos\\BeluStore1\\BeluStore\\BeluStore.csproj",
-      "packagesPath": "C:\\Users\\Guraa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Guraa\\Source\\Repos\\BeluStore1\\BeluStore\\obj\\",
+      "projectPath": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\BeluStore.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Guraa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4351,7 +4351,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

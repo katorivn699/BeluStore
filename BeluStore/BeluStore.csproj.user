@@ -42,6 +42,9 @@
     <Page Update="Views\AddProductWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\OrderPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\EditProductWindow.xaml">
       <SubType>Designer</SubType>
     </Page>

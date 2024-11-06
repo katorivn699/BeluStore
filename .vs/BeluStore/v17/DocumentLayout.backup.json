@@ -1,30 +1,146 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\PRN212\\BeluStore\\",
+  "WorkspaceRootPath": "D:\\FPT K18\\VS\\BeluStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\prn212\\belustore\\belustore\\views\\supplierpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\viewmodels\\categoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\viewmodels\\categoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\views\\usermanagerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\views\\usermanagerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\views\\orderpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\views\\orderpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\views\\orderdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\views\\orderdetailpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\views\\orderdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\views\\orderdetailpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\windows\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\windows\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\views\\orderpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\views\\orderpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\views\\categorypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\views\\categorypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\views\\productpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\views\\productpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\views\\supplierpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\views\\supplierpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\prn212\\belustore\\belustore\\viewmodels\\supplierviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\viewmodels\\supplierviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\views\\categorypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\views\\categorypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\prn212\\belustore\\belustore\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\viewmodels\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\viewmodels\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\viewmodels\\orderdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\viewmodels\\orderdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\viewmodels\\editproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\viewmodels\\editproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\prn212\\belustore\\belustore\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\views\\addproductwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\views\\addproductwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\models\\belustorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\models\\belustorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\views\\usermanagerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\views\\usermanagerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\viewmodels\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\viewmodels\\supplierviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\viewmodels\\supplierviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\prn212\\belustore\\belustore\\views\\addproductwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\fpt k18\\vs\\belustore\\belustore\\views\\addproductwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\views\\addproductwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|d:\\prn212\\belustore\\belustore\\views\\addproductwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3CBF17F2-43B0-4625-9495-EB11B3829F14}|BeluStore\\BeluStore.csproj|solutionrelative:belustore\\views\\addproductwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,62 +150,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Product.cs",
-              "DocumentMoniker": "D:\\PRN212\\BeluStore\\BeluStore\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "BeluStore\\Models\\Product.cs",
-              "ToolTip": "D:\\PRN212\\BeluStore\\BeluStore\\Models\\Product.cs",
-              "RelativeToolTip": "BeluStore\\Models\\Product.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:10:26.553Z",
+              "DocumentIndex": 5,
+              "Title": "OrderPage.xaml",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\OrderPage.xaml",
+              "RelativeDocumentMoniker": "BeluStore\\Views\\OrderPage.xaml",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\OrderPage.xaml",
+              "RelativeToolTip": "BeluStore\\Views\\OrderPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T13:21:09.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Supplier.cs",
-              "DocumentMoniker": "D:\\PRN212\\BeluStore\\BeluStore\\Models\\Supplier.cs",
-              "RelativeDocumentMoniker": "BeluStore\\Models\\Supplier.cs",
-              "ToolTip": "D:\\PRN212\\BeluStore\\BeluStore\\Models\\Supplier.cs",
-              "RelativeToolTip": "BeluStore\\Models\\Supplier.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "BeluStore\\MainWindow.xaml",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\MainWindow.xaml",
+              "RelativeToolTip": "BeluStore\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T12:26:28.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Login.xaml.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Windows\\Login.xaml.cs",
+              "RelativeDocumentMoniker": "BeluStore\\Windows\\Login.xaml.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Windows\\Login.xaml.cs",
+              "RelativeToolTip": "BeluStore\\Windows\\Login.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAnwBcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:10:23.172Z",
+              "WhenOpened": "2024-11-06T12:25:37.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "BeluStore\\Models\\Order.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\Order.cs",
+              "RelativeToolTip": "BeluStore\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:54:51.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\User.cs",
+              "RelativeDocumentMoniker": "BeluStore\\Models\\User.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\User.cs",
+              "RelativeToolTip": "BeluStore\\Models\\User.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:24:54.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AddProductWindow.xaml.cs",
-              "DocumentMoniker": "D:\\PRN212\\BeluStore\\BeluStore\\Views\\AddProductWindow.xaml.cs",
-              "RelativeDocumentMoniker": "BeluStore\\Views\\AddProductWindow.xaml.cs",
-              "ToolTip": "D:\\PRN212\\BeluStore\\BeluStore\\Views\\AddProductWindow.xaml.cs",
-              "RelativeToolTip": "BeluStore\\Views\\AddProductWindow.xaml.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAGUAAAC/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T11:42:14.606Z",
+              "Title": "UserManagerPage.xaml",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\UserManagerPage.xaml",
+              "RelativeDocumentMoniker": "BeluStore\\Views\\UserManagerPage.xaml",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\UserManagerPage.xaml",
+              "RelativeToolTip": "BeluStore\\Views\\UserManagerPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T12:26:57.713Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AdminWindow.xaml",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\AdminWindow.xaml",
+              "RelativeDocumentMoniker": "BeluStore\\AdminWindow.xaml",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\AdminWindow.xaml*",
+              "RelativeToolTip": "BeluStore\\AdminWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T12:25:58.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoryViewModel.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\CategoryViewModel.cs",
+              "RelativeDocumentMoniker": "BeluStore\\ViewModels\\CategoryViewModel.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\CategoryViewModel.cs",
+              "RelativeToolTip": "BeluStore\\ViewModels\\CategoryViewModel.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAiwBcAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:00:24.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "BeluStore\\Models\\Category.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\Category.cs",
+              "RelativeToolTip": "BeluStore\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:57:13.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "SupplierPage.xaml",
-              "DocumentMoniker": "D:\\PRN212\\BeluStore\\BeluStore\\Views\\SupplierPage.xaml",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\SupplierPage.xaml",
               "RelativeDocumentMoniker": "BeluStore\\Views\\SupplierPage.xaml",
-              "ToolTip": "D:\\PRN212\\BeluStore\\BeluStore\\Views\\SupplierPage.xaml",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\SupplierPage.xaml",
               "RelativeToolTip": "BeluStore\\Views\\SupplierPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-11-06T11:38:03.138Z",
@@ -97,28 +279,316 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SupplierViewModel.cs",
-              "DocumentMoniker": "D:\\PRN212\\BeluStore\\BeluStore\\ViewModels\\SupplierViewModel.cs",
-              "RelativeDocumentMoniker": "BeluStore\\ViewModels\\SupplierViewModel.cs",
-              "ToolTip": "D:\\PRN212\\BeluStore\\BeluStore\\ViewModels\\SupplierViewModel.cs",
-              "RelativeToolTip": "BeluStore\\ViewModels\\SupplierViewModel.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAIwKMAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T11:37:50.331Z",
+              "DocumentIndex": 6,
+              "Title": "OrderDetailPage.xaml",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\OrderDetailPage.xaml",
+              "RelativeDocumentMoniker": "BeluStore\\Views\\OrderDetailPage.xaml",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\OrderDetailPage.xaml",
+              "RelativeToolTip": "BeluStore\\Views\\OrderDetailPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T12:56:42.68Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
+              "Title": "ProductPage.xaml",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\ProductPage.xaml",
+              "RelativeDocumentMoniker": "BeluStore\\Views\\ProductPage.xaml",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\ProductPage.xaml",
+              "RelativeToolTip": "BeluStore\\Views\\ProductPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T12:58:31.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderDetailPage.xaml.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\OrderDetailPage.xaml.cs",
+              "RelativeDocumentMoniker": "BeluStore\\Views\\OrderDetailPage.xaml.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\OrderDetailPage.xaml.cs",
+              "RelativeToolTip": "BeluStore\\Views\\OrderDetailPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:35:22.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderViewModel.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\OrderViewModel.cs",
+              "RelativeDocumentMoniker": "BeluStore\\ViewModels\\OrderViewModel.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\OrderViewModel.cs",
+              "RelativeToolTip": "BeluStore\\ViewModels\\OrderViewModel.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAA2wHAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:01:58.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrderPage.xaml.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\OrderPage.xaml.cs",
+              "RelativeDocumentMoniker": "BeluStore\\Views\\OrderPage.xaml.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\OrderPage.xaml.cs",
+              "RelativeToolTip": "BeluStore\\Views\\OrderPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:22:06.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CategoryPage.xaml.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\CategoryPage.xaml.cs",
+              "RelativeDocumentMoniker": "BeluStore\\Views\\CategoryPage.xaml.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\CategoryPage.xaml.cs",
+              "RelativeToolTip": "BeluStore\\Views\\CategoryPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:24:10.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProductViewModel.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\ProductViewModel.cs",
+              "RelativeDocumentMoniker": "BeluStore\\ViewModels\\ProductViewModel.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\ProductViewModel.cs",
+              "RelativeToolTip": "BeluStore\\ViewModels\\ProductViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:58:39.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "OrderDetailViewModel.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\OrderDetailViewModel.cs",
+              "RelativeDocumentMoniker": "BeluStore\\ViewModels\\OrderDetailViewModel.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\OrderDetailViewModel.cs",
+              "RelativeToolTip": "BeluStore\\ViewModels\\OrderDetailViewModel.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAADwvxgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:57:25.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CategoryPage.xaml",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\CategoryPage.xaml",
+              "RelativeDocumentMoniker": "BeluStore\\Views\\CategoryPage.xaml",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\CategoryPage.xaml",
+              "RelativeToolTip": "BeluStore\\Views\\CategoryPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T12:57:32.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "BeluStore\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "BeluStore\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:52:56.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EditProductViewModel.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\EditProductViewModel.cs",
+              "RelativeDocumentMoniker": "BeluStore\\ViewModels\\EditProductViewModel.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\EditProductViewModel.cs",
+              "RelativeToolTip": "BeluStore\\ViewModels\\EditProductViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T13:00:17.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "BeluStore\\Models\\Product.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\Product.cs",
+              "RelativeToolTip": "BeluStore\\Models\\Product.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:10:26.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "BeluStore\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "BeluStore\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAhwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:25:13.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "AddProductWindow.xaml",
-              "DocumentMoniker": "D:\\PRN212\\BeluStore\\BeluStore\\Views\\AddProductWindow.xaml",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\AddProductWindow.xaml",
               "RelativeDocumentMoniker": "BeluStore\\Views\\AddProductWindow.xaml",
-              "ToolTip": "D:\\PRN212\\BeluStore\\BeluStore\\Views\\AddProductWindow.xaml",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\AddProductWindow.xaml",
               "RelativeToolTip": "BeluStore\\Views\\AddProductWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-11-06T11:37:35.966Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "BeluStore\\Models\\OrderDetail.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\OrderDetail.cs",
+              "RelativeToolTip": "BeluStore\\Models\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:54:55.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BeluStore\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\MainWindow.xaml.cs",
+              "RelativeToolTip": "BeluStore\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwCUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:26:40.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\App.xaml",
+              "RelativeDocumentMoniker": "BeluStore\\App.xaml",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\App.xaml",
+              "RelativeToolTip": "BeluStore\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T12:26:15.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "BeluStoreContext.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\BeluStoreContext.cs",
+              "RelativeDocumentMoniker": "BeluStore\\Models\\BeluStoreContext.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\BeluStoreContext.cs",
+              "RelativeToolTip": "BeluStore\\Models\\BeluStoreContext.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAYwMYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:24:47.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UserManagerPage.xaml.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\UserManagerPage.xaml.cs",
+              "RelativeDocumentMoniker": "BeluStore\\Views\\UserManagerPage.xaml.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\UserManagerPage.xaml.cs",
+              "RelativeToolTip": "BeluStore\\Views\\UserManagerPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:27:10.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AdminWindow.xaml.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\AdminWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BeluStore\\AdminWindow.xaml.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\AdminWindow.xaml.cs",
+              "RelativeToolTip": "BeluStore\\AdminWindow.xaml.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwCgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:26:08.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "UserViewModel.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\UserViewModel.cs",
+              "RelativeDocumentMoniker": "BeluStore\\ViewModels\\UserViewModel.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\UserViewModel.cs",
+              "RelativeToolTip": "BeluStore\\ViewModels\\UserViewModel.cs",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAYwAEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:25:25.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "BeluStore\\ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "BeluStore\\ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAYwLYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:25:20.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AddProductWindow.xaml.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\AddProductWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BeluStore\\Views\\AddProductWindow.xaml.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Views\\AddProductWindow.xaml.cs",
+              "RelativeToolTip": "BeluStore\\Views\\AddProductWindow.xaml.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAGUAAAC/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T11:42:14.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\Supplier.cs",
+              "RelativeDocumentMoniker": "BeluStore\\Models\\Supplier.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\Models\\Supplier.cs",
+              "RelativeToolTip": "BeluStore\\Models\\Supplier.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:10:23.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SupplierViewModel.cs",
+              "DocumentMoniker": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\SupplierViewModel.cs",
+              "RelativeDocumentMoniker": "BeluStore\\ViewModels\\SupplierViewModel.cs",
+              "ToolTip": "D:\\FPT K18\\VS\\BeluStore\\BeluStore\\ViewModels\\SupplierViewModel.cs",
+              "RelativeToolTip": "BeluStore\\ViewModels\\SupplierViewModel.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAIwKMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T11:37:50.331Z"
             }
           ]
         }
