@@ -1,6 +1,8 @@
 ﻿using BeluStore.Models;
 using BeluStore.Util;
 using BeluStore.Views;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -68,6 +70,8 @@ namespace BeluStore.ViewModels
         public ICommand DeleteSupplierCommand { get; set; }
         public ICommand UpdateSupplierCommand { get; set; }
         public ICommand ClearSupplierCommand { get; set; }
+        public ICommand ViewProductsCommand { get; }
+
 
         public SupplierViewModel()
         {
@@ -80,6 +84,7 @@ namespace BeluStore.ViewModels
             UpdateSupplierCommand = new RelayCommand(UpdateSupplier);
             SearchSupplierCommand = new RelayCommand(SearchSupplier);
             ClearSupplierCommand = new RelayCommand(ClearSupplier);
+            ViewProductsCommand = new RelayCommand(ViewProducts);
         }
 
         private void LoadSuppliers()
@@ -148,30 +153,41 @@ namespace BeluStore.ViewModels
         {
             if (SelectedSupplier != null)
             {
-   
+
                 var confirmationResult = MessageBox.Show(
-                    "Are you sure you want to delete this supplier?", 
+                    "Are you sure you want to delete this supplier?",
                     "Confirm Deletion",
-                    MessageBoxButton.YesNo, 
-                    MessageBoxImage.Warning 
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Warning
                 );
 
                 if (confirmationResult == MessageBoxResult.Yes)
                 {
                     using (var context = new BeluStoreContext())
                     {
-                        var supplierToDelete = context.Suppliers.Find(SelectedSupplier.SupplierId);
+                        var supplierToDelete = context.Suppliers
+                            .Include(s => s.Products)
+                            .FirstOrDefault(s => s.SupplierId == SelectedSupplier.SupplierId);
+
                         if (supplierToDelete != null)
                         {
-                            context.Suppliers.Remove(supplierToDelete);
-                            context.SaveChanges();
+
+                            //foreach (var product in supplierToDelete.Products)
+                            //{
+                            //    context.Products.Remove(product);
+                            //}
+                            //context.SaveChanges();
+
+
+                            //context.Suppliers.Remove(supplierToDelete);
+                            //context.SaveChanges();
 
                             Suppliers.Remove(SelectedSupplier);
                             ClearSupplier(null);
                         }
                     }
                 }
- 
+
             }
         }
 
@@ -215,35 +231,66 @@ namespace BeluStore.ViewModels
         {
             var errorMessages = new List<string>();
 
-            if (string.IsNullOrWhiteSpace(EditedSupplier.SupplierName) || EditedSupplier.SupplierName.Trim().Length < 5)
+
+            if (string.IsNullOrWhiteSpace(EditedSupplier.SupplierName) || EditedSupplier.SupplierName.Trim().Length < 3 || EditedSupplier.SupplierName.Trim().Length > 255 || !Regex.IsMatch(EditedSupplier.SupplierName, @"^[a-zA-Z0-9\s]*$"))
             {
-                errorMessages.Add("Supplier Name must be at least 5 characters long.");
+                errorMessages.Add("Supplier Name must be between 3 and 255 characters and cannot contain special characters.");
             }
 
-            if (!Regex.IsMatch(EditedSupplier.SupplierPhone, @"^(\+?\d{10,})$"))
+            if (string.IsNullOrWhiteSpace(EditedSupplier.SupplierPhone) || !Regex.IsMatch(EditedSupplier.SupplierPhone, @"^(\+?\d{10,20})$"))
             {
-                errorMessages.Add("Supplier Phone must be at least 10 digits long and contain only numbers (optionally starting with '+').");
+                errorMessages.Add("Supplier Phone must be between 10 and 20 digits long and contain only numbers (optionally starting with '+').");
             }
 
-            if (string.IsNullOrWhiteSpace(EditedSupplier.SupplierDescription))
+            if (string.IsNullOrWhiteSpace(EditedSupplier.SupplierDescription) || EditedSupplier.SupplierDescription.Length > 255)
             {
-                errorMessages.Add("Supplier Description cannot be empty.");
+                errorMessages.Add("Supplier Description cannot be empty and must be less than 256 characters.");
             }
 
-            if (string.IsNullOrWhiteSpace(EditedSupplier.Address))
+
+            if (string.IsNullOrWhiteSpace(EditedSupplier.Address) || EditedSupplier.Address.Length > 255)
             {
-                errorMessages.Add("Address cannot be empty.");
+                errorMessages.Add("Address cannot be empty and must be less than 256 characters.");
             }
 
-            // Show error messages if any
+
             if (errorMessages.Any())
             {
                 MessageBox.Show(string.Join(Environment.NewLine, errorMessages), "Validation Errors", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
 
-            // All validations passed
             return true;
         }
+
+        private void ViewProducts(object id)
+        {
+            if (id is int supplierId)
+            {
+
+                using (var context = new BeluStoreContext())
+                {
+
+                    var productsOfSupplier = context.Products
+                                .Where(product => product.SupplierId == supplierId)
+                                .Include(product => product.Category)
+                                .Include(product => product.Supplier)
+                                .ToList();
+
+
+                    if (productsOfSupplier.Any())
+                    {
+                        ObservableCollection<Product> list = new ObservableCollection<Product>(productsOfSupplier);
+                        var productWindow = new SupplierProductWindow(list);
+                        productWindow.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No products found for this supplier.");
+                    }
+                }
+            }
+        }
+
     }
 }

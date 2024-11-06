@@ -127,7 +127,8 @@ public partial class BeluStoreContext : DbContext
 
             entity.HasOne(d => d.Supplier).WithMany(p => p.Products)
                 .HasForeignKey(d => d.SupplierId)
-                .HasConstraintName("FK__product__supplie__4316F928");
+                .HasConstraintName("FK__product__supplie__4316F928")
+                .OnDelete(DeleteBehavior.SetNull);
         });
 
         modelBuilder.Entity<Supplier>(entity =>
@@ -182,6 +183,10 @@ public partial class BeluStoreContext : DbContext
             entity.Property(e => e.Role)
                 .HasMaxLength(50)
                 .HasColumnName("role");
+            entity.Property(e => e.Status)
+               .HasMaxLength(50)
+               .HasDefaultValue("Active")
+               .HasColumnName("status");
             entity.Property(e => e.Username)
                 .HasMaxLength(255)
                 .HasColumnName("username");

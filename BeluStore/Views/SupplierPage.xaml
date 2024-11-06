@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
       xmlns:local="clr-namespace:BeluStore.Views"
       xmlns:vm="clr-namespace:BeluStore.ViewModels"
       mc:Ignorable="d" 
@@ -45,12 +46,15 @@
                 <DataGridTemplateColumn Header="View Products" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="View Products" Command="{Binding DataContext.ViewProductsCommand, RelativeSource={RelativeSource AncestorType=Page}}" CommandParameter="{Binding}">
-                            </Button>
+                            <!-- Dùng CommandParameter trực tiếp từ dòng dữ liệu -->
+                            <Button Content="View Products" 
+                            Command="{Binding DataContext.ViewProductsCommand, RelativeSource={RelativeSource AncestorType=Page}}" 
+                            CommandParameter="{Binding SupplierId}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
+        
         </DataGrid>
 
 
@@ -82,18 +86,57 @@
 
 
         <WrapPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0">
-            <Button x:Name="AddButton" Content="Add" Height="50" Width="100" Margin="10" Command="{Binding AddSupplierCommand}"/>
-            <Button x:Name="UpdateButton" Content="Update" Height="50" Width="100" Margin="10" Command="{Binding UpdateSupplierCommand}"/>
-            <Button x:Name="DeleteButton" Content="Delete" Height="50" Width="100" Margin="10" Command="{Binding DeleteSupplierCommand}" CommandParameter="{Binding SelectedSupplier}"/>
-            <Button x:Name="Clear" Content="Clear" Height="50" Width="100" Margin="10" Command="{Binding ClearSupplierCommand}"/>
+            <Button  x:Name="AddButton"  Height="50" Width="100" Margin="10" Command="{Binding AddSupplierCommand}" >
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <ui:SymbolIcon Symbol="AddCircle12" Width="16" Height="16" />
+
+                    <TextBlock Text="Add" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                </StackPanel>
+            </Button>
+
+
+            <Button x:Name="UpdateButton" Height="50" Width="100" Margin="10" Command="{Binding UpdateSupplierCommand}">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <ui:SymbolIcon Symbol="Edit16" Width="16" Height="16" />
+
+                    <TextBlock Text="Update" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="DeleteButton"  Height="50" Width="100" Margin="10" Command="{Binding DeleteSupplierCommand}" CommandParameter="{Binding SelectedSupplier}">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <ui:SymbolIcon Symbol="Delete12" Width="16" Height="16" />
+
+                    <TextBlock Text="Delete" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="Clear"  Height="50" Width="100" Margin="10" Command="{Binding ClearSupplierCommand}">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <ui:SymbolIcon Symbol="Eraser20" Width="16" Height="16" />
+
+                    <TextBlock Text="Clear" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                </StackPanel>
+            </Button>
 
             <TextBox Grid.Row="0" 
-          Margin="10"
-          Width="100"
+                 Margin="10"
+                  Width="100"
                      Height="40"
-      
           Text="{Binding SearchKeyword, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
-            <Button Content="Search" Width="100" Height="50" Margin="10" Command="{Binding SearchSupplierCommand}"/>
+
+            <Button Width="100" Height="50" Margin="10" Command="{Binding SearchSupplierCommand}">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <ui:SymbolIcon Symbol="Search12" Width="16" Height="16" />
+
+                    <TextBlock Text="Search" VerticalAlignment="Center" Margin="5,0,0,0"/>
+                </StackPanel>
+            </Button>
         </WrapPanel>
     </Grid>
 

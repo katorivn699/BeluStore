@@ -617,6 +617,7 @@ D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\EditProductWindow.g
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\OrderDetailPage.g.cs
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\ProductPage.g.cs
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\SupplierPage.g.cs
+D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\SupplierProductWindow.g.cs
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\UserManagerPage.g.cs
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Windows\Login.g.cs
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Windows\Register.g.cs
@@ -624,9 +625,6 @@ D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\App.g.cs
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore_MarkupCompile.cache
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore_MarkupCompile.lref
-D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore.dll
-D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\refint\BeluStore.dll
-D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore.pdb
 D:\PRN212\BeluStore\BeluStore\bin\Debug\net8.0-windows\BeluStore.exe
 D:\PRN212\BeluStore\BeluStore\bin\Debug\net8.0-windows\BeluStore.deps.json
 D:\PRN212\BeluStore\BeluStore\bin\Debug\net8.0-windows\BeluStore.runtimeconfig.json
@@ -755,6 +753,7 @@ D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\EditProductWindow.b
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\OrderDetailPage.baml
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\ProductPage.baml
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\SupplierPage.baml
+D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\SupplierProductWindow.baml
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\Views\UserManagerPage.baml
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore.g.resources
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore.GeneratedMSBuildEditorConfig.editorconfig
@@ -763,5 +762,8 @@ D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore.AssemblyInfo.cs
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore.csproj.CoreCompileInputs.cache
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore.sourcelink.json
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore.csproj.Up2Date
+D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore.dll
+D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\refint\BeluStore.dll
+D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore.pdb
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\BeluStore.genruntimeconfig.cache
 D:\PRN212\BeluStore\BeluStore\obj\Debug\net8.0-windows\ref\BeluStore.dll
