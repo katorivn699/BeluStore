@@ -1,0 +1,45 @@
+﻿<ui:FluentWindow 
+    x:Class="BeluStore.AdminWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+       xmlns:local="clr-namespace:BeluStore"
+       xmlns:view="clr-namespace:BeluStore.Views"
+       mc:Ignorable="d"
+       WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+       Title="Admin Dashboard" Height="450" Width="800">
+
+    <Grid>
+        <!-- Define rows for the TitleBar and NavigationView -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Row for TitleBar -->
+            <RowDefinition Height="*"/>
+            <!-- Row for NavigationView -->
+        </Grid.RowDefinitions>
+
+        <!-- TitleBar in the first row -->
+        <ui:TitleBar Title="Admin Dashboard" Grid.Row="0"/>
+
+        <!-- NavigationView in the second row -->
+        <ui:NavigationView IsBackButtonVisible="Auto" IsPaneOpen="False" Grid.Row="1" >
+            <ui:NavigationView.MenuItems>
+                <ui:NavigationViewItem Content="Home" Icon="{ui:SymbolIcon Home24}"/>
+                <ui:NavigationViewItem Content="Suppliers" Icon="{ui:SymbolIcon BoxArrowLeft20}" TargetPageType="{x:Type view:SupplierPage}"/>
+                <ui:NavigationViewItem Content="Products" Icon="{ui:SymbolIcon TrayItemAdd20}" TargetPageType="{x:Type view:ProductPage}"/>
+                <ui:NavigationViewItem Content="Categories" Icon="{ui:SymbolIcon Library24}" TargetPageType="{x:Type view:CategoryPage}"/>
+                <ui:NavigationViewItem Content="Orders" Icon="{ui:SymbolIcon AlignSpaceFitVertical20}" TargetPageType="{x:Type view:OrderPage}"/>
+                <ui:NavigationViewItem Content="Users" Icon="{ui:SymbolIcon People20}" TargetPageType="{x:Type view:UserManagerPage}"/>
+            </ui:NavigationView.MenuItems>
+
+            <ui:NavigationView.FooterMenuItems>
+                <ui:NavigationViewItem x:Name="LogoutButton" Content="Logout" Icon="{ui:SymbolIcon SignOut24}" ToolTip="Log out"/>
+            </ui:NavigationView.FooterMenuItems>
+
+        </ui:NavigationView>
+
+    </Grid>
+</ui:FluentWindow>

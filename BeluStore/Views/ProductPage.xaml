@@ -1,0 +1,64 @@
+﻿<Page x:Class="BeluStore.Views.ProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:local="clr-namespace:BeluStore.Views"
+      xmlns:vm="clr-namespace:BeluStore.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProductPage">
+    <Page.DataContext>
+        <vm:ProductViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+            <Button Content="Add new product" Command="{Binding AddCommand}" Margin="0,0,10,0"/>
+            <TextBlock VerticalAlignment="Center" Foreground="White" Margin="0,0,10,0">Search by Name:</TextBlock>
+            <TextBox Width="200" Height="40" 
+                     Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" 
+                     />
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding products, Mode=TwoWay}" CanUserAddRows="False" VerticalContentAlignment="Center" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Width="*" Binding="{Binding ProductId}"/>
+                    <DataGridTextColumn Header="Product Name" Width="*" Binding="{Binding ProductName}"/>
+                    <DataGridTextColumn Header="Category" Width="*" Binding="{Binding Category.CategoryName}"/>
+                    <DataGridTextColumn Header="Supplier" Width="*" Binding="{Binding Supplier.SupplierName}"/>
+                    <DataGridTextColumn Header="Price" Width="*" Binding="{Binding Price}"/>
+                    <!--<DataGridTextColumn Header="Image" Width="*"  Binding="{Binding ProductImage}"/>-->
+                    <DataGridTemplateColumn Header="Image" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding ProductImageSource}" Width="50" Height="50" Stretch="UniformToFill" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Quantity" Width="*"  Binding="{Binding QuantityInStock}"/>
+                    <DataGridTemplateColumn Header="Actions" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Margin="3">
+                                    <Button Content="{ui:SymbolIcon Edit16}"
+                                Command="{Binding DataContext.UpdateCommand, RelativeSource={RelativeSource AncestorType=Page}}" 
+                                CommandParameter="{Binding}" 
+                                Margin="5,0"/>
+                                    <Button Content="{ui:SymbolIcon delete16}" 
+                                Command="{Binding DataContext.DeleteCommand, RelativeSource={RelativeSource AncestorType=Page}}" 
+                                CommandParameter="{Binding}" 
+                                Margin="5,0"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>

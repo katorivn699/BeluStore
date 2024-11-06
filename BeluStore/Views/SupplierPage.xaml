@@ -1,0 +1,100 @@
+﻿<Page x:Class="BeluStore.Views.SupplierPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BeluStore.Views"
+      xmlns:vm="clr-namespace:BeluStore.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="956.58" d:DesignWidth="1865.6"
+      Title="SupplierPage"
+      Foreground="White">
+    <Page.DataContext>
+        <vm:SupplierViewModel/>
+    </Page.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="4*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*" />
+            <ColumnDefinition Width="640*"/>
+            <ColumnDefinition Width="147*" />
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+
+
+
+
+        <DataGrid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" 
+                  ItemsSource="{Binding Suppliers}" 
+                  SelectedItem="{Binding SelectedSupplier}" 
+                  AutoGenerateColumns="False" 
+                  CanUserAddRows="False"
+                  IsReadOnly="True" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Supplier ID" Binding="{Binding SupplierId}" Width="*" />
+                <DataGridTextColumn Header="Name" Binding="{Binding SupplierName}" Width="*" />
+                <DataGridTextColumn Header="Phone" Binding="{Binding SupplierPhone}" Width="*" />
+                <DataGridTextColumn Header="Description" Binding="{Binding SupplierDescription}" Width="*" />
+                <DataGridTextColumn Header="Address" Binding="{Binding Address}" Width="*" />
+                <DataGridTemplateColumn Header="View Products" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="View Products" Command="{Binding DataContext.ViewProductsCommand, RelativeSource={RelativeSource AncestorType=Page}}" CommandParameter="{Binding}">
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Supplier ID" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Name" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Phone" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Description" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Address" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding EditedSupplier.SupplierId, Mode=OneWay}" IsReadOnly="True" />
+            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding EditedSupplier.SupplierName, Mode=TwoWay}" />
+            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding EditedSupplier.SupplierPhone, Mode=TwoWay}" />
+            <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding EditedSupplier.SupplierDescription, Mode=TwoWay}" />
+            <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding EditedSupplier.Address, Mode=TwoWay}" />
+        </Grid>
+
+
+        <WrapPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0">
+            <Button x:Name="AddButton" Content="Add" Height="50" Width="100" Margin="10" Command="{Binding AddSupplierCommand}"/>
+            <Button x:Name="UpdateButton" Content="Update" Height="50" Width="100" Margin="10" Command="{Binding UpdateSupplierCommand}"/>
+            <Button x:Name="DeleteButton" Content="Delete" Height="50" Width="100" Margin="10" Command="{Binding DeleteSupplierCommand}" CommandParameter="{Binding SelectedSupplier}"/>
+            <Button x:Name="Clear" Content="Clear" Height="50" Width="100" Margin="10" Command="{Binding ClearSupplierCommand}"/>
+
+            <TextBox Grid.Row="0" 
+          Margin="10"
+          Width="100"
+                     Height="40"
+      
+          Text="{Binding SearchKeyword, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+            <Button Content="Search" Width="100" Height="50" Margin="10" Command="{Binding SearchSupplierCommand}"/>
+        </WrapPanel>
+    </Grid>
+
+</Page>

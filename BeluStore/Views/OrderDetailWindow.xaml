@@ -1,0 +1,48 @@
+﻿<ui:FluentWindow x:Class="BeluStore.Views.OrderDetailWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                 xmlns:local="clr-namespace:BeluStore.Views"
+                 xmlns:vm="clr-namespace:BeluStore.ViewModels"
+                 xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+                 mc:Ignorable="d" 
+                 d:DesignHeight="450" d:DesignWidth="800"
+                 Title="OrderDetailWindow"
+                 Height="450" Width="800">
+
+    <ui:FluentWindow.DataContext>
+        <vm:OrderViewModel/>
+    </ui:FluentWindow.DataContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="6*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="6*" />
+        </Grid.ColumnDefinitions>
+        <ui:TitleBar Title="Order Detail" Grid.Row="0" Grid.ColumnSpan="2"/>
+        
+
+        <DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                  ItemsSource="{Binding OrderDetails}" 
+                  AutoGenerateColumns="False" 
+                  CanUserAddRows="False"
+                  IsReadOnly="True">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="OrderDetailId" Binding="{Binding OrderDetailId}" Width="1*" />
+                <DataGridTextColumn Header="OrderId" Binding="{Binding OrderId}" Width="1*" />
+                <DataGridTextColumn Header="ProductId" Binding="{Binding ProductId}" Width="1*" />
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="1*" />
+                <DataGridTextColumn Header="UnitPrice" Binding="{Binding UnitPrice}" Width="1*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+
+</ui:FluentWindow>
